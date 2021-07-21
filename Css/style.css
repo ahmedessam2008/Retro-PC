@@ -1,0 +1,239 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #fecb2b;
+  padding: 15em 0 25em;
+}
+
+.screen {
+  height: 362px;
+  width: 450px;
+  background: linear-gradient(
+    180deg,
+    #ffd7d7 5.5%,
+    0,
+    #ff5d5d 77.7%,
+    #ea3751 0
+  );
+  box-shadow: 0 0 0 20px #6c1837, 0 0 0 28px #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.screen::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 290px;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    190deg,
+    #ffd7d7 10.5%,
+    0,
+    #ff5d5d 67.7%,
+    #ea3751 0
+  );
+  border-radius: 0 200px 200px 0/0 120px 120px 0;
+  border: 20px solid #6c1837;
+  box-shadow: 4px 4px 0 4px #fff, 4px -4px 0 4px #fff;
+}
+.screen::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 5px;
+  background: #6c1837;
+  color: #6c1837;
+  border-radius: 10px;
+  box-shadow: 0 25px 0 0, 0 50px 0 0, 0 -25px 0 0, 0 -50px 0 0, 0 -75px 0 0;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background: #fff8f4;
+  color: #6c1837;
+  box-shadow: 0 0 0 8px;
+  border-radius: inherit;
+}
+p::before {
+  content: "";
+  position: absolute;
+  padding: 12.5px;
+  bottom: 2em;
+  left: 2em;
+  background: #6c1837;
+  border-radius: 50%;
+  box-shadow: 33px 0 0 0, 66px 0 0 0, 99px 0 0 0;
+}
+p::after {
+  content: "";
+  position: absolute;
+  bottom: 0.3em;
+  right: 2em;
+  transform: translateY(-50%);
+  background: #6c1837;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+aside {
+  position: absolute;
+  width: 266px;
+  height: 225px;
+  background: #6c1837;
+  border-radius: 10px;
+  box-shadow: 0 0 0 7px #6c1837;
+  margin: 2em;
+}
+aside::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 200px;
+  width: 240px;
+  background: #00d2bf;
+  border-radius: 10px 0 10px 0;
+}
+
+section {
+  position: relative;
+  width: 530px;
+  height: 90px;
+  background: linear-gradient(180deg, #ffd7d7 20%, 0, #ff5d5d 55%, #ea3751 0);
+  bottom: -408px;
+  left: -10%;
+  box-shadow: 0 0 0 20px #6c1837, 0 0 0 28px #fff;
+  border-radius: 20px 20px 0 0;
+}
+section::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 35px;
+  background: #6c1837;
+  box-shadow: 0 0 0 8px #fff;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  z-index: -1;
+}
+section::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 35px;
+  background: #6c1837;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
+section div,
+section div::after,
+section div::before {
+  all: initial;
+}
+
+.case {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.case::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background: #6c1837;
+  left: 300px;
+  top: 30px;
+  border-radius: 10px;
+}
+.case .cd {
+  position: absolute;
+  width: 170px;
+  height: 60px;
+  background: #6c1837;
+  left: 2.5em;
+  top: 1em;
+  border-radius: 10px;
+}
+.case .cd .cd-buttons {
+  position: absolute;
+  background: #f6b6ac;
+  width: 135px;
+  height: 45px;
+  top: 0.5em;
+  right: 0.5em;
+}
+.case .cd .cd-buttons::before {
+  content: "";
+  position: absolute;
+  right: 1.1em;
+  top: 0.6em;
+  padding: 12.5px;
+  background: #00d2bf;
+  box-shadow: 0 0 0 5px #6c1837, 8px 0 0 4px #6c1837;
+  border-radius: 50%;
+}
+.case .cd .cd-buttons::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  border-radius: 50px;
+  top: 0.7em;
+  left: -1.2em;
+  background: #6c1837;
+  color: #6c1837;
+  box-shadow: 0 10px 0 0, 0 20px 0 0;
+}
+
+article {
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 400px;
+  height: 30px;
+  background: #6c1837;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 1em;
+  gap: 0.5em;
+  z-index: 2;
+}
+article a {
+  all: initial;
+  background: #f6b6ac;
+  height: 13px;
+}
+article a:first-child {
+  width: 62%;
+}
+article a:last-child {
+  width: 30%;
+}
