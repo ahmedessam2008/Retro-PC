@@ -6,6 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bordColor: #6c1837;
+  --whiteBorder: #fff;
+}
 body {
   font-family: sans-serif;
   display: grid;
@@ -24,7 +28,7 @@ body {
     #ff5d5d 77.7%,
     #ea3751 0
   );
-  box-shadow: 0 0 0 20px #6c1837, 0 0 0 28px #fff;
+  box-shadow: 0 0 0 20px var(--bordColor), 0 0 0 28px var(--whiteBorder);
   border-radius: 10px;
   position: relative;
 }
@@ -47,8 +51,9 @@ body {
   border-top-right-radius: 200px 137px;
   border-bottom-right-radius: 200px 139px;
   border-bottom-left-radius: 0px;
-  box-shadow: 4px 4px 0 4px #fff, 4px -4px 0 4px #fff;
-  border: 20px solid #6c1837;
+  box-shadow: 4px 4px 0 4px var(--whiteBorder),
+    4px -4px 0 4px var(--whiteBorder);
+  border: 20px solid var(--bordColor);
 }
 .pc::after {
   content: "";
@@ -58,8 +63,8 @@ body {
   transform: translateY(-50%);
   width: 70px;
   height: 5px;
-  background: #6c1837;
-  color: #6c1837;
+  background: var(--bordColor);
+  color: var(--bordColor);
   border-radius: 10px;
   box-shadow: 0 25px 0 0, 0 50px 0 0, 0 -25px 0 0, 0 -50px 0 0, 0 -75px 0 0;
 }
@@ -70,7 +75,7 @@ body {
   width: 75%;
   height: 100%;
   background: #fff8f4;
-  color: #6c1837;
+  color: var(--bordColor);
   box-shadow: 0 0 0 8px;
   border-radius: inherit;
 }
@@ -80,7 +85,7 @@ body {
   padding: 12.5px;
   bottom: 2em;
   left: 2em;
-  background: #6c1837;
+  background: var(--bordColor);
   border-radius: 50%;
   box-shadow: 33px 0 0 0, 66px 0 0 0, 99px 0 0 0;
 }
@@ -90,7 +95,7 @@ body {
   bottom: 0.3em;
   right: 2em;
   transform: translateY(-50%);
-  background: #6c1837;
+  background: var(--bordColor);
   border-radius: 50%;
   padding: 20px;
 }
@@ -98,9 +103,9 @@ body {
   position: absolute;
   width: 266px;
   height: 225px;
-  background: #6c1837;
+  background: var(--bordColor);
   border-radius: 10px;
-  box-shadow: 0 0 0 7px #6c1837;
+  box-shadow: 0 0 0 7px var(--bordColor);
   margin: 2em;
 }
 .main-sc::after {
@@ -120,7 +125,7 @@ body {
   background: linear-gradient(180deg, #ffd7d7 20%, 0, #ff5d5d 55%, #ea3751 0);
   bottom: -408px;
   left: -10%;
-  box-shadow: 0 0 0 20px #6c1837, 0 0 0 28px #fff;
+  box-shadow: 0 0 0 20px var(--bordColor), 0 0 0 28px var(--whiteBorder);
   border-radius: 20px 20px 0 0;
 }
 .bottom::before {
@@ -128,8 +133,8 @@ body {
   position: absolute;
   width: 700px;
   height: 35px;
-  background: #6c1837;
-  box-shadow: 0 0 0 8px #fff;
+  background: var(--bordColor);
+  box-shadow: 0 0 0 8px var(--whiteBorder);
   bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
@@ -141,7 +146,7 @@ body {
   position: absolute;
   width: 700px;
   height: 35px;
-  background: #6c1837;
+  background: var(--bordColor);
   bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
@@ -151,7 +156,7 @@ body {
   position: absolute;
   width: 80%;
   height: 100%;
-  background: #fff;
+  background: var(--whiteBorder);
   border-radius: 10px 10px 0 0;
 }
 .case::after {
@@ -159,7 +164,7 @@ body {
   position: absolute;
   width: 100px;
   height: 30px;
-  background: #6c1837;
+  background: var(--bordColor);
   left: 300px;
   top: 30px;
   border-radius: 10px;
@@ -168,7 +173,7 @@ body {
   position: absolute;
   width: 170px;
   height: 60px;
-  background: #6c1837;
+  background: var(--bordColor);
   left: 2.5em;
   top: 1em;
   border-radius: 10px;
@@ -188,7 +193,7 @@ body {
   top: 0.6em;
   padding: 12.5px;
   background: #00d2bf;
-  box-shadow: 0 0 0 5px #6c1837, 8px 0 0 4px #6c1837;
+  box-shadow: 0 0 0 5px var(--bordColor), 8px 0 0 4px var(--bordColor);
   border-radius: 50%;
 }
 .case .cd .cd-buttons::after {
@@ -199,7 +204,32 @@ body {
   border-radius: 50px;
   top: 0.7em;
   left: -1.2em;
-  background: #6c1837;
-  color: #6c1837;
+  background: var(--bordColor);
+  color: var(--bordColor);
   box-shadow: 0 10px 0 0, 0 20px 0 0;
+}
+.midd {
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 400px;
+  height: 30px;
+  background: #6c1837;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 1em;
+  gap: 0.5em;
+  z-index: 2;
+}
+.midd span {
+  background: #f6b6ac;
+  height: 13px;
+}
+.midd span:first-child {
+  width: 62%;
+}
+.midd span:last-child {
+  width: 30%;
 }
