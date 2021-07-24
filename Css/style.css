@@ -1,21 +1,20 @@
+/* Global Prop  */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
-
 body {
-  height: 100vh;
+  font-family: sans-serif;
   display: grid;
   place-content: center;
+  height: 100vh;
   background: #fecb2b;
-  padding: 15em 0 25em;
+  padding: 20px 0;
 }
-
-.screen {
+.pc {
   height: 362px;
   width: 450px;
   background: linear-gradient(
@@ -29,13 +28,13 @@ body {
   border-radius: 10px;
   position: relative;
 }
-.screen::before {
+.pc::before {
   content: "";
   position: absolute;
-  width: 70px;
+  width: 61px;
   height: 290px;
   top: 50%;
-  right: -20%;
+  right: -18%;
   transform: translateY(-50%);
   background: linear-gradient(
     190deg,
@@ -44,11 +43,14 @@ body {
     #ff5d5d 67.7%,
     #ea3751 0
   );
-  border-radius: 0 200px 200px 0/0 120px 120px 0;
-  border: 20px solid #6c1837;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 200px 137px;
+  border-bottom-right-radius: 200px 139px;
+  border-bottom-left-radius: 0px;
   box-shadow: 4px 4px 0 4px #fff, 4px -4px 0 4px #fff;
+  border: 20px solid #6c1837;
 }
-.screen::after {
+.pc::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -61,8 +63,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 25px 0 0, 0 50px 0 0, 0 -25px 0 0, 0 -50px 0 0, 0 -75px 0 0;
 }
-
-p {
+.screen {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +74,7 @@ p {
   box-shadow: 0 0 0 8px;
   border-radius: inherit;
 }
-p::before {
+.screen::before {
   content: "";
   position: absolute;
   padding: 12.5px;
@@ -83,7 +84,7 @@ p::before {
   border-radius: 50%;
   box-shadow: 33px 0 0 0, 66px 0 0 0, 99px 0 0 0;
 }
-p::after {
+.screen::after {
   content: "";
   position: absolute;
   bottom: 0.3em;
@@ -93,8 +94,7 @@ p::after {
   border-radius: 50%;
   padding: 20px;
 }
-
-aside {
+.main-sc {
   position: absolute;
   width: 266px;
   height: 225px;
@@ -103,7 +103,7 @@ aside {
   box-shadow: 0 0 0 7px #6c1837;
   margin: 2em;
 }
-aside::after {
+.main-sc::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -113,8 +113,7 @@ aside::after {
   background: #00d2bf;
   border-radius: 10px 0 10px 0;
 }
-
-section {
+.bottom {
   position: relative;
   width: 530px;
   height: 90px;
@@ -124,7 +123,7 @@ section {
   box-shadow: 0 0 0 20px #6c1837, 0 0 0 28px #fff;
   border-radius: 20px 20px 0 0;
 }
-section::before {
+.bottom::before {
   content: "";
   position: absolute;
   width: 700px;
@@ -137,7 +136,7 @@ section::before {
   border-radius: 50px;
   z-index: -1;
 }
-section::after {
+.bottom::after {
   content: "";
   position: absolute;
   width: 700px;
@@ -148,12 +147,6 @@ section::after {
   transform: translateX(-50%);
   border-radius: 50px;
 }
-section div,
-section div::after,
-section div::before {
-  all: initial;
-}
-
 .case {
   position: absolute;
   width: 80%;
@@ -209,31 +202,4 @@ section div::before {
   background: #6c1837;
   color: #6c1837;
   box-shadow: 0 10px 0 0, 0 20px 0 0;
-}
-
-article {
-  position: absolute;
-  bottom: -38px;
-  left: 50%;
-  transform: translate(-50%);
-  width: 400px;
-  height: 30px;
-  background: #6c1837;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 1em;
-  gap: 0.5em;
-  z-index: 2;
-}
-article a {
-  all: initial;
-  background: #f6b6ac;
-  height: 13px;
-}
-article a:first-child {
-  width: 62%;
-}
-article a:last-child {
-  width: 30%;
 }
